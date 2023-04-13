@@ -1,0 +1,167 @@
+.featured-products {
+
+   .heading {
+      margin-bottom: 5rem;
+
+      h2 {
+         flex-basis: 46%;
+      }
+   }
+
+   .swiper-wrapper {
+      padding-bottom: 4rem;
+   }
+}
+
+.badge {
+   top: 3%;
+   left: 3%;
+   color: green;
+   position: absolute;
+   border-radius: 0.2rem;
+   padding: 0.4rem 0.8rem;
+   font-size: var(--fs-icons);
+   background-color: white;
+}
+
+.product-item {
+
+   .card-img2,
+   .card-img3,
+   .card-img4 {
+      display: none;
+   }
+
+   .hover-imgs {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .hover-img {
+      top: 0;
+      width: 25%;
+      height: 100%;
+      cursor: pointer;
+      position: absolute;
+
+      &::after {
+         content: "";
+         width: 95%;
+         bottom: -2%;
+         height: 0.6rem;
+         position: absolute;
+         background-color: hsl(0, 0%, 92%);
+         transition: background-color 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+         background-color: hsl(0, 0%, 77%);
+      }
+   }
+
+   .hover-img1 {
+      left: 0;
+
+      &:hover {
+
+         ~.card-img1 {
+            display: block !important;
+         }
+
+         ~.card-img2,
+         ~.card-img3,
+         ~.card-img4 {
+            display: none;
+         }
+      }
+   }
+
+   .hover-img2 {
+      left: 25%;
+
+      &:hover {
+
+         ~.card-img2 {
+            display: block !important;
+         }
+
+         ~.card-img1,
+         ~.card-img3,
+         ~.card-img4 {
+            display: none;
+         }
+      }
+   }
+
+   .hover-img3 {
+      left: 50%;
+
+      &:hover {
+
+         ~.card-img3 {
+            display: block !important;
+         }
+
+         ~.card-img1,
+         ~.card-img2,
+         ~.card-img4 {
+            display: none;
+         }
+      }
+   }
+
+   .hover-img4 {
+      left: 75%;
+
+      &:hover {
+
+         ~.card-img4 {
+            display: block !important;
+         }
+
+         ~.card-img1,
+         ~.card-img2,
+         ~.card-img3 {
+            display: none;
+         }
+      }
+   }
+
+   .review span {
+      margin-left: 1rem;
+      font-size: var(--fs-h5);
+   }
+}
+
+.card-content {
+
+   h3 {
+      color: black;
+      padding: 1rem 0;
+      font-size: var(--fs-h5);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+         color: var(--color-secondary);
+      }
+   }
+
+   .price-group {
+      gap: 1.4rem;
+      display: flex;
+   }
+
+   .price,
+   .price-crossed {
+      font-size: var(--fs-h5);
+   }
+
+   .price-crossed {
+      color: hsl(0, 0%, 68%);
+      text-decoration: line-through;
+   }
+}

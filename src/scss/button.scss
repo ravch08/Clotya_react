@@ -1,0 +1,40 @@
+.btn {
+   color: black;
+   border-radius: 0;
+   font-weight: bold;
+   display: inline-block;
+   padding: 1.2rem 3.2rem;
+   font-size: var(--fs-btn);
+   border: 1px solid grey;
+   background-color: transparent;
+   transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+   svg {
+      margin-left: 0.6rem;
+      transform: translateY(0.3rem);
+      transition: fill 0.3s ease-in-out;
+   }
+
+   &:hover {
+      color: white;
+      background-color: grey;
+   }
+
+   &:hover svg {
+      fill: white;
+   }
+}
+
+.btn-noBorder {
+   color: black;
+   padding: 1.5rem 0;
+
+   svg {
+      margin-left: 1rem;
+      transform: translateY(0.2rem);
+   }
+
+   &:hover {
+      color: var(--color-secondary);
+   }
+}

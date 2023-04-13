@@ -1,0 +1,141 @@
+/* // -- PROPERTY  -------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: var(--lh-heading);
+  font-family: var(--fm-primary);
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+ul:not(.browser-default)>li {
+  list-style: none;
+}
+
+a:not(.browser-default) {
+  text-decoration: none;
+}
+
+p {
+  font-size: var(--fs-body);
+  font-family: var(--fm-body);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+h4 {
+  font-size: var(--fs-h4);
+}
+
+figure {
+  line-height: 0;
+}
+
+img {
+  height: auto;
+  line-height: 0;
+  max-width: 100%;
+  border-style: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+section {
+  padding: var(--section-padding) 0;
+}
+
+.d-none {
+  display: none;
+}
+
+/* OPTIONAL -- remove animations for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --fs-h1: 3.6rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2rem;
+    --fs-h4: 1.6rem;
+    --fs-h5: 1.4rem;
+    --fs-h6: 1.2rem;
+
+    --fs-btn: 1.4rem;
+    --fs-body: 1.4rem;
+    --fs--icons: 1.2rem;
+    --fs-topbar: 1.2rem;
+    --fs-subheading: 1.5rem;
+  }
+}
+
+
+.collection-box {
+  position: absolute;
+}
+
+.bannerCollection {
+  height: 50rem;
+  background-image: url(../assets/banner-box2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.clients {
+  padding: 3rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.clients img {
+  opacity: 0.6;
+}
+
+.page-banner {
+  line-height: 0;
+  padding: 0 0 6rem;
+  position: relative;
+}
+
+.page-banner .banner-title {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.page-banner h1 {
+  color: white;
+}

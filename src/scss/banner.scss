@@ -1,0 +1,47 @@
+.banner {
+   padding: 0 5% 2rem 5%;
+}
+
+.banner-item {
+   position: relative;
+
+   .banner-content {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 40%;
+
+      h1 {
+         font-weight: 400;
+      }
+
+      span {
+         font-weight: 600;
+         font-size: var(--fs-h5);
+      }
+
+      p {
+         padding: 1.2rem 0 3.6rem;
+      }
+   }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+   font-size: var(--fs-body);
+}
+
+.swiper-button-prev {
+   left: 3%;
+}
+
+.swiper-button-next {
+   right: 3%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+   color: black;
+   padding: 0.6rem 1rem;
+   background-color: hsl(0, 0%, 85%);
+}

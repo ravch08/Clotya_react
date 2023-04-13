@@ -1,0 +1,89 @@
+ footer {
+ 	padding-top: 8rem;
+
+ 	.ftr-list {
+ 		flex-basis: 17%;
+ 	}
+
+ 	.ftr-logo {
+ 		flex-basis: 30%;
+
+ 		p {
+ 			padding: 1.5rem 0;
+ 			font-size: var(--fs-btn);
+ 		}
+ 	}
+
+ 	.ftr-list {
+
+ 		span {
+ 			font-weight: bold;
+ 			font-size: var(--fs-h5);
+ 		}
+
+ 		.ftr-item {
+ 			display: flex;
+ 		}
+
+ 		.ftr-link {
+ 			color: black;
+ 			padding: 0.5rem 0;
+ 			font-size: var(--fs-h5);
+ 			transition: color 0.3s ease-in-out;
+
+ 			:hover {
+ 				color: var(--color-secondary);
+ 			}
+ 		}
+ 	}
+
+ 	.footer-bar {
+ 		padding: 2rem 0;
+ 		border-top: 1px solid hsl(0, 0%, 83%);
+
+
+ 		p {
+ 			font-size: var(--fs-btn);
+ 		}
+
+ 		a {
+ 			color: black;
+ 			font-size: var(--fs-btn);
+ 			transition: color 0.3s ease-in-out;
+
+ 			&:hover {
+ 				color: var(--color-secondary);
+ 			}
+ 		}
+ 	}
+ }
+
+ .scrollTop {
+ 	right: 3%;
+ 	bottom: 5%;
+ 	cursor: pointer;
+ 	position: fixed;
+ 	width: 5rem;
+ 	height: 5rem;
+ 	display: flex;
+ 	border-radius: 50%;
+ 	transform: scale(0);
+ 	align-items: center;
+ 	justify-content: center;
+ 	background-color: var(--color-secondary);
+ 	box-shadow: 0px 5px 10px 0px hsla(0, 0%, 0%, 0.2);
+ 	transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+ 	svg {
+ 		fill: #fff;
+ 		transform: translateY(-1px);
+ 	}
+
+ 	&.show {
+ 		transform: scale(1);
+ 	}
+
+ 	&:hover {
+ 		background-color: hsl(176, 45%, 14%);
+ 	}
+ }
