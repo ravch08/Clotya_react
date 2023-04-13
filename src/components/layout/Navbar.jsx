@@ -11,7 +11,7 @@ const Navbar = () => {
    const [sticky, setSticky] = useState("");
 
    const makeSticky = () => {
-      const stickyClass = window.scrollY > 250 ? 'sticky' : '';
+      const stickyClass = window.scrollY >= 150 ? 'sticky' : '';
       setSticky(stickyClass);
    };
 

@@ -5,7 +5,7 @@ const ScrollToTop = () => {
    const [scroll, setScroll] = useState("");
 
    const scroller = () => {
-      const scrollClass = window.scrollY > 250 ? 'show' : '';
+      const scrollClass = window.scrollY >= 150 ? 'show' : '';
       setScroll(scrollClass);
    };
 
