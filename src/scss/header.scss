@@ -64,7 +64,7 @@
 		}
 	}
 
-	:hover>.dropdown-menu {
+	&:hover>.dropdown-menu {
 		opacity: 1;
 		visibility: visible;
 	}
