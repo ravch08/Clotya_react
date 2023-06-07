@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Stack } from '@mui/material';
+import { Container, Stack } from '@mui/material';
 
 import { ProductsItem } from '../layout/helper';
 import { productItems } from '../layout/Data';

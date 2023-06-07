@@ -12,7 +12,7 @@ const MiddleBar = (props) => {
          <Container>
 
             <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
-               <Stack className="social-media" direction={'row'}>
+               <Stack className="social-media" direction={'row'} alignItems={'center'}>
                   <div className='socials'>
                      {million}
                      <svg xmlns="http://www.w3.org/2000/svg" width="12" viewBox="0 0 448 512">
