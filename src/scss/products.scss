@@ -165,3 +165,29 @@
       text-decoration: line-through;
    }
 }
+
+
+.product-pageInfo {
+
+   .quantity {
+      border: 0.1rem solid black;
+
+      label {
+         display: none;
+      }
+
+      input {
+         border: none;
+         text-align: center;
+      }
+
+      .quantity-button {
+         height: 4.6rem;
+         display: flex;
+         padding: 2rem;
+         cursor: pointer;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+}

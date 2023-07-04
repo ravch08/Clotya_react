@@ -1,8 +1,6 @@
 import React from 'react';
 import { Container, Stack } from '@mui/material';
-
 import { ProductsItem } from '../layout/helper';
-import { productItems } from '../layout/Data';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
@@ -11,9 +9,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import { addToCart } from '../../app/cartSlice';
+import { useSelector, useDispatch } from 'react-redux';
+
 const Products = (props) => {
 
-   const productItemsList = productItems.slice(props.num1, props.num2).map(productItem => <SwiperSlide key={productItem.id}>
+   const dispatch = useDispatch();
+   const allProductItems = useSelector(state => state.cartState.items);
+
+   const productItemsList = allProductItems.slice(props.num1, props.num2).map(productItem => <SwiperSlide key={productItem.id}>
       <ProductsItem
          title={productItem.title}
          price={productItem.price}
@@ -23,7 +27,9 @@ const Products = (props) => {
          imgSrc3={productItem.imgSrc3}
          imgSrc4={productItem.imgSrc4}
          discount={productItem.discount}
-         priceCrossed={productItem.priceCrossed} />
+         priceCrossed={productItem.priceCrossed}
+         // detailPageHandler={() => { }}
+         addToCartHandler={() => dispatch(addToCart(productItem))} />
    </SwiperSlide>)
 
    return (

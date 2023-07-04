@@ -150,6 +150,7 @@ nav {
 
 	.nav-item {
 		display: flex;
+		align-items: center;
 
 		&:hover>.dropdown-menu {
 			opacity: 1;
@@ -173,8 +174,60 @@ nav {
 	padding: 2rem 0;
 }
 
-.user-links svg {
-	margin: 2rem 1rem;
+.user-info {
+	display: flex;
+
+	.user-links {
+		line-height: 0;
+	}
+
+	svg {
+		margin: 2rem 1rem;
+	}
+
+	.cart {
+		position: relative;
+
+		&:hover .cart-dropdown {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.badge {
+			right: -30%;
+			left: initial;
+			color: white;
+			font-size: 0.9rem;
+			line-height: initial;
+			background-color: var(--color-secondary);
+		}
+
+		.cart-dropdown {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			opacity: 0;
+			z-index: 99;
+			width: 30rem;
+			padding: 1rem;
+			height: 20rem;
+			visibility: hidden;
+			line-height: initial;
+			background-color: white;
+			box-shadow: var(--box-shadow-md);
+			transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+			figure {
+				width: 4rem;
+				height: 4rem;
+				overflow: hidden;
+			}
+
+			.product-info {
+				font-size: 1.6rem;
+			}
+		}
+	}
 }
 
 nav .dropdown-menu {
