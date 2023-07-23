@@ -28,7 +28,6 @@ const Products = (props) => {
          imgSrc4={productItem.imgSrc4}
          discount={productItem.discount}
          priceCrossed={productItem.priceCrossed}
-         // detailPageHandler={() => { }}
          addToCartHandler={() => dispatch(addToCart(productItem))} />
    </SwiperSlide>)
 

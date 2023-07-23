@@ -316,24 +316,3 @@ export const dropdownItems = [
 ];
 
 export default latestNewsItems;
-
-
-// getCartTotal: state => {
-//    let totalPrice = 0;
-//    let totalQuantity = 0;
-
-//    state.carts.forEach((cartItem) => {
-//       const { price, quantity } = cartItem;
-//       const itemTotal = price * quantity;
-//       totalPrice += itemTotal;
-//       totalQuantity += quantity;
-//    });
-
-//    console.log(state);
-
-//    return {
-//       ...state,
-//       totalPrice: parseFloat(totalPrice.toFixed(2)),
-//       totalQuantity,
-//    };
-// },
