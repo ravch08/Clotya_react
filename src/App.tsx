@@ -1,12 +1,15 @@
 import { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+	createBrowserRouter,
+	createRoutesFromElements,
+	Route,
+	RouterProvider,
+} from "react-router-dom";
 import {
 	Blog,
 	CartPage,
 	Contact,
 	Error,
-	Footer,
-	Header,
 	Home,
 	Men,
 	ProductDetail,
@@ -17,6 +20,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { getCartTotal } from "./app/cartSlice";
 
+import Layout from "./components/utils/Layout";
 import "./scss/main.scss";
 
 function App() {
@@ -27,23 +31,23 @@ function App() {
 		dispatch(getCartTotal());
 	}, [carts]);
 
-	return (
-		<BrowserRouter>
-			<Header />
-			<Routes>
+	const router = createBrowserRouter(
+		createRoutesFromElements(
+			<Route element={<Layout />}>
 				<Route path="/" element={<Home />} />
-				<Route path="/shop" element={<Shop />} />
-				<Route path="/women" element={<Women />} />
-				<Route path="/men" element={<Men />} />
-				<Route path="/blog" element={<Blog />} />
-				<Route path="/contact" element={<Contact />} />
-				<Route path="/cart" element={<CartPage />} />
-				<Route path="/product/:id" element={<ProductDetail />} />
+				<Route path="shop" element={<Shop />} />
+				<Route path="women" element={<Women />} />
+				<Route path="men" element={<Men />} />
+				<Route path="blog" element={<Blog />} />
+				<Route path="contact" element={<Contact />} />
+				<Route path="cart" element={<CartPage />} />
+				<Route path="product/:id" element={<ProductDetail />} />
 				<Route path="*" element={<Error />} />
-			</Routes>
-			<Footer />
-		</BrowserRouter>
+			</Route>
+		)
 	);
+
+	return <RouterProvider router={router} />;
 }
 
 export default App;
